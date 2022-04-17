@@ -3,6 +3,8 @@ title: scikit learn
 description: 사이킷런(scikit learn)은 파이썬 머신러닝 라이브러리중 가장 많이 사용되는 라이브러리다.
 tags:
 - Machine learning
+- KFold
+- GridSearchCV
 ---
 
 # scikit learn 설치
@@ -59,7 +61,7 @@ print('붓꽃 데이터셋 keys:', keys)
 붓꽃 데이터셋 keys: dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 'filename', 'data_module'])
 ```
 
-## 이제 iris 데이터셋의 피처, 피처명과 레이블을 각각 확인해보자
+## 데이터셋의 피처, 피처명과 레이블 확인
 
 ```python
 iris_features = iris.data # 2차원 150, 4
@@ -78,7 +80,7 @@ iris_label
 ```
 ![](https://velog.velcdn.com/images/adastra/post/2ad033f3-acff-4465-ade1-63d02acd2cf2/image.png)
 
-## 최종적으로 피처와 레이블 합쳐서 데이터프레임을 생성해보자
+## DataFrame 생성
 
 ```python
 import pandas as pd
