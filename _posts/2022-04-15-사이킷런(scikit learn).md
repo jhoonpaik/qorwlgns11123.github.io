@@ -19,21 +19,28 @@ tags:
 import sklearn
 print(sklearn.__version__)
 ```
-```1.0.2```
+
+```
+1.0.2
+```
+
 
 # 사이킷런에 내장된 붓꽃데이터셋 확인
 
 붓꽃 데이터의 피처는 Sepal length, Sepal width, Petal length, Petal width로 구성되어 있다.  
 붓꽃데이터의 레이블은 Setosa, Vesicolor, Virginica로 구성되어있다.
 
-먼저 sklearn 데이터셋에서 iris 데이터를 불러와보
+먼저 sklearn 데이터셋에서 iris 데이터를 불러와보자
+
 ```python
 from sklearn.datasets import load_iris
 iris = load_iris()
 type(iris)
 ```
 
-```sklearn.utils.Bunch```
+```
+sklearn.utils.Bunch
+```
 
 ## Bunch
 
