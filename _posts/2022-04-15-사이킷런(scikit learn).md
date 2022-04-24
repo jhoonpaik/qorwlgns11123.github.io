@@ -271,3 +271,166 @@ print('\n## 평균 검증 정확도:', np.mean(cv_accuracy))
 5개의 교차 검증 결과 평균 검증 정확도는 0.9로 나타났다.  
 결과를 보면 교차 검증시 검증 세트의 index가 달라지는 것을 확인할 수 있다.  
 이를 통해 split()함수가 어떻게 인덱스를 할당하는지 직관적으로 파악할 수 있다.
+
+### cross_val_score() API 활용
+
+사이킷런은 교차검증을 좀 더 간편하게 수행할 수 있는 cross_val_score()를 제공한다.
+
+앞서 KFold로 데이터를 학스밯고 예측하는 코드를 보면
+1) 폴드 세트 설정  
+2) for 루프로 반복하여 학습, 테스트데이터 인덱스 추출
+3) 반복 학습, 예측 수행 및 예측 성능 반환
+와 같은 형태의 과정으로 진행되는 과정을 cross_val_score()를 통해 한 번에 수행할 수 있다.
+
+cross_val_score() API는 아래와 같이 선언한다.
+```python
+cross_val_score(estimator, # 분류 or 회귀 알고리즘 설정
+                X,         # 피처 데이터셋
+                y=None,    # 레이블 데이터셋
+                scoring=None, # 예측 성능 평가지표
+                cv=None, # 교차검증 폴드 수
+                n_jobs=1,
+                verbose=0,
+                fit_params=None,
+                pre_dispatch='2*n_jobs')
+```
+
+cross_val_score() API를 한 번 사용하여 결과를 확인해보자  
+교차검증 폴드 수는 5, 성능 평가지표는 accuracy로 진행한다.
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import cross_val_score, cross_validate
+from sklearn.datasets import load_iris
+import numpy as np
+
+iris_data = load_iris()
+dt_clf = DecisionTreeClassifier(random_state=156)
+
+data = iris_data.data
+label = iris_data.target
+
+scores = cross_val_score(dt_clf,
+                        data,
+                        label,
+                        scoring='accuracy',
+                        cv=5)
+
+print('교차 검증별 정확도:', np.round(scores, 4))
+print('평균 검증 정확도:', np.round(np.mean(scores), 4))
+```
+
+```
+교차 검증별 정확도: [0.9667 0.9667 0.9    0.9667 1.    ]
+평균 검증 정확도: 0.96
+```
+
+위와 같이 cross_val_score()는 학습, 예측평가까지 한 번에 진행해주는 API이기 때문에 간단하게 교차 검증을 수행할 수 있다.
+
+## GridSearchCV
+하이퍼파라미터는 머신러닝 알고리즘을 구성하는 주요 오소로 하이퍼 파라미터 조정을 통해 모델 성능을 개선할 수 있다.
+
+사이킷런에서는 GridSearchCV API를 통해 알고리즘의 하이퍼 파라미터를 순차적으로 입력하여 최적의 파라미터를 도출할 수 있다.
+(*Grid는 격자라는 뜻으로 촘촘하게 테스트한다는 의미로도 볼 수 있다.)
+
+아래와 같이 파라미터 집합을 생성하여 이를 순차적으로 적용하여 최적의 파라미터를 도출하는 방식으로 진행된다.
+```python
+grid_parameters = {'max_depth': [1, 2, 3].
+                   'min_samples_split': [2, 3],
+                  }
+```
+|순번|max_depth|min_samples_split|
+|---|---|---|
+|1|1|2|
+|2|1|3|
+|3|2|2|
+|4|2|3|
+|5|3|2|
+|6|3|3|
+
+위와 같이 총 6회를 걸쳐 파라미터를 순차적으로 바꿔서 최적의 파라미터, 수행결과를 도출한다.
+
+GridSearchCV 클래스 생성자의 주요 파라미터는 아래와 같다.
+- estimator: classifier, regressor
+- param_grid: estimator 튜닝을 위해 파라미터명과 사용될 여러 파라미터값 지정(앞서 생성한 파라미터 집합을 입력하면 된다.)
+- scoring: 평가척도
+- cv: 교차검증을 위한 학습/테스트 데이터셋 갯수
+- refit=True: 최적의 하이퍼 파라미터 찾은 후 입력된 estimator에서 최적 하이퍼 파라미터를 재학습
+
+아래의 예제를 통해 GridSearchCV API를 실습해보자
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import GridSearchCV, train_test_split
+
+# 데이터 로딩
+iris_data = load_iris()
+
+# 데이터 분리
+X_train, X_test, y_train, y_test = train_test_split(iris_data.data, iris_data.target,
+                                                   test_size=0.2, random_state=121)
+
+dtree = DecisionTreeClassifier()
+
+# dic 형태의 파라미터 집합 생성
+parameters = {'max_depth':[1, 2, 3], 'min_samples_split':[2, 3]}
+
+```
+
+방식을 아래와 같이 진행된다.
+1) 학습데이터 셋을 GridSearch 객체의 fit(학습데이터셋) 메서드에 인자로 입력  
+2) GridSearchCV fit 메서드를 수행하면 학습 데이터를 cv 수 만큼 폴딩 세트로 분할해 param_grid의 하이퍼 파라미터를 변경하가며 학습/평가 수행후 결과를 cv_result_ 속성에 기록  
+3) cv_results_는 gridsearchcv의 결과세트로 딕셔너리 형태를 가짐 -> df로 변환하여 직관적으로 확인
+
+```python
+import pandas as pd
+
+grid_dtree = GridSearchCV(dtree,
+                         param_grid=parameters,
+                         cv=3,
+                         refit=True) # refit이 True이므로 가장 좋은 param으로 재학습
+
+# 순차적으로 학습/평가
+grid_dtree.fit(X_train, y_train)
+
+# gridsearchcv 결과 추출하여 df로 변환
+scores_df = pd.DataFrame(grid_dtree.cv_results_)
+scores_df[['params','mean_test_score','rank_test_score',
+         'split0_test_score', 'split1_test_score', 'split2_test_score']]
+```
+![](https://velog.velcdn.com/images/adastra/post/4373a995-74d6-44ec-90ce-395b3f895c67/image.png)
+
+데이터프레임으로 변환한 결과에서 params는 순차적으로 학습한 파라미터 조합이고 rank_test_score는 예측성능 순위를 나타낸다. split0, 1, 2_test_score는 3개의 폴딩 세트에서 각각 테스트한 성능 수치로서 이를 평균낸 결과가 mean_test_score 수치이다.
+
+Grid_SearchCV 객체의 fit()을 수행하면 최고 성능 파라미터와 평가결과 값이 best_params_, best_score_ 속성에 기록된다.  
+(즉, 위의 rank_test_score에서 1위의 파라미터, 평가결과 값이다.)
+
+1위의 하이퍼파라미터와 평가결과를 확인해보자
+
+```python
+print('GridSearchCV 최적 파라미터: ', grid_dtree.best_params_)
+print('GridSearchCV 최고 정확도: ', grid_dtree.best_score_)
+```
+```
+GridSearchCV 최적 파라미터:  {'max_depth': 3, 'min_samples_split': 2}
+GridSearchCV 최고 정확도:  0.975
+```
+
+refit_True로 설정했으므로 GridSearchCV가 최적 성능을 나타내는 하이퍼 파라미터로 Estimator를 재학습해 best_estimator_로 저장되었다. 이 best_estimator를 이용해 앞서 train_test_split()으로 분리한 테스트 데이터셋을 예측 및 성능 평가를 진행해보자
+
+```python
+# GridSearchCV의 refit으로 이미 학습된 estimator 변환
+estimator = grid_dtree.best_estimator_
+
+pred = estimator.predict(X_test)
+print('테스트 데이터셋 정확도: {0:.4f}'.format(accuracy_score(y_test, pred)))
+```
+
+```
+테스트 데이터셋 정확도: 0.9667
+```
+
+이처럼 보편적으로 진행되는 머신러닝 모델 적용방법은 학습 데이터를 GridSearchCV를 이용해 최적 하이퍼 파라미터를 수행한 후 별도의 테스트셋으로 평가하는 방식으로 진행된다.
+
+> 참고자료: 파이썬 머신러닝 완벽 가이드 - 권철민
