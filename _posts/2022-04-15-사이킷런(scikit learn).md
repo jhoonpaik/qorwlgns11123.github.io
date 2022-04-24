@@ -339,14 +339,7 @@ grid_parameters = {'max_depth': [1, 2, 3].
                    'min_samples_split': [2, 3],
                   }
 ```
-|순번|max_depth|min_samples_split|
-|---|---|---|
-|1|1|2|
-|2|1|3|
-|3|2|2|
-|4|2|3|
-|5|3|2|
-|6|3|3|
+![](https://velog.velcdn.com/images/adastra/post/5492e9a1-3393-4209-a468-c5946ca724be/image.PNG)
 
 위와 같이 총 6회를 걸쳐 파라미터를 순차적으로 바꿔서 최적의 파라미터, 수행결과를 도출한다.
 
@@ -378,7 +371,7 @@ parameters = {'max_depth':[1, 2, 3], 'min_samples_split':[2, 3]}
 
 ```
 
-방식을 아래와 같이 진행된다.
+방식을 아래와 같이 진행된다.  
 1) 학습데이터 셋을 GridSearch 객체의 fit(학습데이터셋) 메서드에 인자로 입력  
 2) GridSearchCV fit 메서드를 수행하면 학습 데이터를 cv 수 만큼 폴딩 세트로 분할해 param_grid의 하이퍼 파라미터를 변경하가며 학습/평가 수행후 결과를 cv_result_ 속성에 기록  
 3) cv_results_는 gridsearchcv의 결과세트로 딕셔너리 형태를 가짐 -> df로 변환하여 직관적으로 확인
