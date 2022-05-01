@@ -143,6 +143,11 @@ sklearn의 train_test_split을 통해 원본 데이터 셋을 학습, 테스트 
 
 - random_state: 호출시 동일한 학습/테스트 셋을 생성하기 위해 주어지는 난수값. 호출시 무작위로 분리하므로 동일한 데이터셋을 위해 설정한다.
 
+## 사이킷런 model 학습 과정
+
+사이킷런 머신러닝 학습과정은 아래와 같이 이루어진다.
+![](https://velog.velcdn.com/images/adastra/post/21410ed5-3d78-4b31-9d56-4a0aabbeaffe/image.png)
+
 그럼 이제 붓꽃 데이터셋을 train_test_split()을 통해 분리해보자
 
 ```python
