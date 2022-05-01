@@ -222,3 +222,5 @@ plt.show()
 ```
 
 ![](https://velog.velcdn.com/images/adastra/post/25959396-41e3-4313-8520-35ccde686d90/image.png)
+
+> 참고자료: 파이썬 머신러닝 완벽 가이드 - 권철민
