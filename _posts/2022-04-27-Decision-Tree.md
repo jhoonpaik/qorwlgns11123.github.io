@@ -2,7 +2,7 @@
 title: Decision Tree
 description: 앙상블의 기본 알고리즘인 결정트리는 매우 쉽고 유연하게 적용할 수 있는 알고리즘이다.
 tags:
-- decision tree
+- Machine learning
 - classification
 ---
 
