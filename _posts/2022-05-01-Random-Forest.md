@@ -1,6 +1,7 @@
 ---
 title: Random Forest
 description: 랜덤 포레스트는 결정트리 기반으로 알고리즘으로 앙상블 기법 중 빠른 속도와 높은 예측성능을 보이는 기법중 하나이다.
+tags:
 - Machine learning
 - Bagging
 - classification
