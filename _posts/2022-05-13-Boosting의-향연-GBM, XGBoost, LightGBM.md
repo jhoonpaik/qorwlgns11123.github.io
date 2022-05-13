@@ -1,6 +1,6 @@
 ---
-title: 2022-05-13-Boosting의-향연-GBM, XGBoost, LightGBM
-description: ㅇㅇ
+title: Boosting의 향연 GBM, XGBoost, LightGBM
+description: 부스팅 알고리즘은 순차적 학습, 예측을 진행하며 error 데이터 가중치 부여를 통해 개선하는 학습방식이다.
 tags:
 - Machine learning
 - Boosting
