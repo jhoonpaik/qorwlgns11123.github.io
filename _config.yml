@@ -122,7 +122,7 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
-  search: /search.xml
+  # search: /search.xml
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -587,7 +587,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: True
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
