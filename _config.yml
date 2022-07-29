@@ -379,6 +379,10 @@ s
 # Duoshuo ShortName
 #duoshuo_shortname:
 
+# comments
+comments:
+	provider: disqus
+
 # Disqus
 disqus:
   enable: true
