@@ -381,7 +381,7 @@ s
 
 # comments
 # comments:
-# provider: "disqus"
+provider: "utterances"
 
 # # Disqus
 # disqus:
