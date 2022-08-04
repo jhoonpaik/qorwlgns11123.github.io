@@ -380,8 +380,8 @@ s
 #duoshuo_shortname:
 
 # comments
-# comments:
-provider: "utterances"
+comments:
+  provider: "utterances"
 
 # # Disqus
 # disqus:
