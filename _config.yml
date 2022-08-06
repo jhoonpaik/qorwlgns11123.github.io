@@ -12,6 +12,10 @@ author: qorwlgns11123
 language: en
 date_format: '%Y-%m-%d'
 
+# disqus url, id
+disqus_url: https://qorwlgns11123.github.io
+disqus_id: https-qorwlgns11123-github-io
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
 url: "https://qorwlgns11123.github.io"
