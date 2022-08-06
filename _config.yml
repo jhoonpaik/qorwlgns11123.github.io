@@ -14,7 +14,7 @@ date_format: '%Y-%m-%d'
 
 # disqus url, id
 disqus_url: https://qorwlgns11123.github.io
-disqus_id: https-qorwlgns11123-github-io
+disqus_id: qorwlgns11123-github-io
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
@@ -387,7 +387,7 @@ s
 # Disqus
 disqus:
   enable: true
-  shortname: https-qorwlgns11123-github-io
+  shortname: qorwlgns11123-github-io
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
