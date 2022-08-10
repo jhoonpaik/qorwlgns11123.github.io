@@ -203,6 +203,7 @@ font:
     external: true
     family:
     size:
+    line_number: false
 
 
 
