@@ -49,6 +49,8 @@ highlight:
 markdown: kramdown
 kramdown:
     input: GFM
+      # block:
+      #   line_numbers: false
 
 # Default Attributes
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
@@ -203,7 +205,7 @@ font:
     external: true
     family:
     size:
-    line_number: false
+    line_numbers: false
 
 
 
