@@ -4,6 +4,8 @@ description: 앙상블의 기본 알고리즘인 결정트리는 매우 쉽고 �
 tags:
 - Machine learning
 - classification
+categories:
+- STUDY
 ---
 
 

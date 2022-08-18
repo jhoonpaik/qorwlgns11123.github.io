@@ -5,6 +5,8 @@ tags:
 - Machine learning
 - KFold
 - GridSearchCV
+categories:
+- STUDY
 ---
 
 # scikit learn 설치

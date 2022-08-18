@@ -5,6 +5,8 @@ tags:
 - Machine learning
 - Boosting
 - classification
+categories:
+- STUDY
 ---
 
 # Boosting

@@ -5,6 +5,8 @@ tags:
 - Machine learning
 - Bagging
 - classification
+categories:
+- STUDY
 ---
 
 # 앙상블 학습
