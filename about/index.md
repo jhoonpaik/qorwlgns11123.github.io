@@ -64,13 +64,15 @@ Inha university Industrial engineering (Bachelor's degree) (2018.03 ~ 2021.08)
 
 # Project
 
+## Team project
+
 - 데이터 기반 COVID-19 확진자 분석 및 정보 사이트 구축 (2020.10 ~ 2020.11)
 - 서울특별시 다회용품 서비스 우선 입지 선정 (2022.01)
 - K디지털 교육생 출결 대시보드 (2022.02)
 - 특정 ETF 주가예측 모델링 및 시각화 (2022.05 ~ 2022.06)
 
-
-
+## Toy project
+- 아이템 협업 필터링 기반 도서 추천시스템 구축
 
 
 😄 감사합니다.
