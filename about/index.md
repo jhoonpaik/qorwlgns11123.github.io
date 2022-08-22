@@ -3,7 +3,6 @@ layout: page
 type: about
 ---
 
-# PETER | 고객을 위한 데이터 테일러를 꿈꾸고 있습니다.
 
 ![](https://velog.velcdn.com/images/adastra/post/a178af52-9ace-48ca-b531-1a7eb153da2a/image.JPG)
 
@@ -18,10 +17,10 @@ type: about
 
 고객의 취향까지 파악해 맞춤 정장을 만드는 테일러와 같이  데이터를 통해 고객 한 분 한 분의 성향을 파악하여 고객을 위한 데이터 테일러로 성장하는 것이 목표입니다.
 
+# SternStunde, 별의 순간.
 
 ![](https://velog.velcdn.com/images/adastra/post/74b68a39-a73b-4f20-8b22-9a5a51497f10/image.jpg)
 
-# SternStunde, 별의 순간.
 
 블로그 이름은 SternStunde(슈테른슈튼데), 한국어로 별의 순간이라는 뜻입니다.
 미래에 지대한 영향을 끼치는 숙명적인 결정이나 행위, 사건을 뜻하는 은유로 쓰이며 흔히 한국어로 '운명적 시간, 결정적 순간'이라는 의미를 뜻합니다.
