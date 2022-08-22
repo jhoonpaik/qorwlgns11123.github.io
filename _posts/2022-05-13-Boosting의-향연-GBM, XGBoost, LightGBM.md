@@ -1,5 +1,5 @@
 ---
-title: Boosting의 향연 GBM, XGBoost, LightGBM
+title: Boosting 개념, GBM(Gradient Boosting Machine)
 description: 부스팅 알고리즘은 순차적 학습, 예측을 진행하며 error 데이터 가중치 부여를 통해 개선하는 학습방식이다.
 tags:
 - Machine learning
@@ -139,7 +139,3 @@ print('GBM 정확도: {0:.4f}'.format(gb_accuracy))
 ```
 GBM 정확도: 0.9410
 ```
-
-# XGBOOST
-
-# LightBGM
