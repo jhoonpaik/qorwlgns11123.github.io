@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 type: about
 ---
@@ -93,4 +93,4 @@ Inha university Industrial engineering (Bachelor's degree) (2018.03 ~ 2021.08)
 
 😄 감사합니다.
 
-![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif)
+![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif) -->
