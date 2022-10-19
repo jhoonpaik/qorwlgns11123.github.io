@@ -68,16 +68,6 @@ Inha university Industrial engineering (Bachelor's degree) (2018.03 ~ 2021.08)
 
 
 
-## [Certificate]
-
-- TOPCIT Lv.2 (2020.10.17)
-
-- ADsP (2022.03.25)
-
-- GAIQ (2022.08.08)
-
-
-
 # Project.
 
 ## [Team project]
