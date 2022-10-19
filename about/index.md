@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: page
 type: about
 ---
@@ -9,7 +9,7 @@ type: about
 
 # I am.
 
-데이터분석을 통해 문제를 해결하여 고객의 만족도를 높이는 데이터 분석가로 성장을 꿈꾸고 있습니다.
+저는 데이터분석을 통해 문제를 해결하여 고객의 만족도를 높이는 데이터 분석가로 성장을 꿈꾸고 있습니다.
 
 
 
@@ -93,4 +93,4 @@ Inha university Industrial engineering (Bachelor's degree) (2018.03 ~ 2021.08)
 
 😄 감사합니다.
 
-![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif) -->
+![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif)
