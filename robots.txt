@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://qorwlgns11123.github.io/sitemap.xml
