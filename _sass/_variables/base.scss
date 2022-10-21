@@ -19,6 +19,7 @@ $black-light  : #555;
 $black-dim    : #333;
 $black-deep   : #222;
 $black        : #000;
+$hex-color    : #151515;
 $red          : #ff2a2a;
 $blue-bright  : #87daff;
 $blue         : #0684bd;
@@ -143,7 +144,7 @@ $table-row-hover-bg-color       : $whitesmoke;
 // Code & Code Blocks
 // --------------------------------------------------
 $code-font-family               : $font-family-monospace;
-$code-font-size                 : 13px;
+$code-font-size                 : 15px;
 $code-font-size                 : if(type-of(jekyll-config('font.codes.size')) == 'number', jekyll-config('font.codes.size') + px, $code-font-size);
 $code-border-radius             : 3px;
 $code-foreground                : $black-light;
