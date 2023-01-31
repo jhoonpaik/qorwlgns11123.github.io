@@ -1,5 +1,3 @@
-# Hyper API 를 통해 Tableau .hyper 파일CUID(Create, Update, Insert, Delete) 진행
-
 ---
 title: Tableau Hyper API Guide
 description: Tableau .hyper 파일 CUID(Create, Update, Insert, Delete) 진행
