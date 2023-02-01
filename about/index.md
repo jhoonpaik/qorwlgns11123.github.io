@@ -2,9 +2,9 @@
 layout: page
 type: about
 ---
+Preparing..
 
-
-![](https://velog.velcdn.com/images/adastra/post/a178af52-9ace-48ca-b531-1a7eb153da2a/image.JPG)
+<!-- ![](https://velog.velcdn.com/images/adastra/post/a178af52-9ace-48ca-b531-1a7eb153da2a/image.JPG)
 
 
 # I am.
@@ -83,4 +83,4 @@ Inha university Industrial engineering (Bachelor's degree) (2018.03 ~ 2021.08)
 
 😄 감사합니다.
 
-![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif)
+![](https://velog.velcdn.com/images/adastra/post/1207832d-79ff-402d-889d-c2f7697c1a94/image.gif) -->

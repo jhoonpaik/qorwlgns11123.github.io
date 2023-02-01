@@ -46,7 +46,7 @@ Hyper API는 Python, C++, Java 등 다양한 프로그래밍 언어로 패키지
 
 *Colab: 웹 브라우저에서 주피터 노트북 에디터 형식 기반 텍스트와 코드를 자유롭게 작성할 수 있는 온라인 에디터 툴
 
-1. 먼저 구글 코랩 사이트를 접속하거나 해당 코드를 저장할 구글드라이브 폴더에서 우클릭 후, Google Colaboratory 를 클릭합니다.
+구글 코랩 사이트를 접속하거나 해당 코드를 저장할 구글드라이브 폴더에서 우클릭 후, Google Colaboratory 를 클릭합니다.
 
 메뉴에서 보이지 않는 경우 하단의 연결할 앱 더보기를 클릭하여 Colaboratory를 설치합니다.
 
@@ -55,7 +55,7 @@ Hyper API는 Python, C++, Java 등 다양한 프로그래밍 언어로 패키지
 
 ![](https://velog.velcdn.com/images/adastra/post/4d456293-2ae9-49ca-a51a-816fe49da620/image.png)
 
-1. 먼저 Tableau Hyper API 를 설치합니다.
+1. Tableau Hyper API 를 설치합니다.
 
 ```powershell
 pip install tableauhyperapi
@@ -63,7 +63,7 @@ pip install tableauhyperapi
 
 Successfully installed tableauhyperapi 이 뜨면 성공적으로 설치된 것입니다.
 
-1. API 설치 후, 필요한 라이브러리를 불러옵니다.(Colab 에는 pandas, numpy 등 기본 라이브러리가 내장되어 있으므로 별도로 설치할 필요가 없습니다.)
+2. API 설치 후, 필요한 라이브러리를 불러옵니다.(Colab 에는 pandas, numpy 등 기본 라이브러리가 내장되어 있으므로 별도로 설치할 필요가 없습니다.)
 
 ```python
 import pandas as pd
@@ -214,7 +214,7 @@ row_count = connection.execute_command(
 print(f"The number of updated rows in table {escape_name('Orders')} is {row_count}")
 ```
 
-1. 갱신한 후, 데이터를 확인합니다.
+5. 갱신한 후, 데이터를 확인합니다.
 
 ```python
 rows_post_update = connection.execute_list_query(
