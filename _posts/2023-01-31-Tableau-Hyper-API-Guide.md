@@ -1,11 +1,12 @@
 ---
 title: Tableau Hyper API Guide
-description: Tableau .hyper 파일 CUID(Create, Update, Insert, Delete) 진행
+description: 'Tableau .hyper 파일 CUID(Create, Update, Insert, Delete) 진행'
 tags:
-- Tableau
-- API
+  - Tableau
+  - API
 categories:
-- STUDY
+  - STUDY
+published: true
 ---
 
 # What is Hyper API?
@@ -238,7 +239,7 @@ path_to_source_database = "superstore.hyper"
 path_to_database = Path(shutil.copy(path_to_source_database, "superstore_sample_delete.hyper")).resolve()
 ```
 
-~~Orders~~ 테이블의 Order Date가 2012-08-01 이하에 해당되는 Customer ID를 Customer 테이블에서 삭제합니다.
+Orders 테이블의 Order Date가 2012-08-01 이하에 해당되는 Customer ID를 Customer 테이블에서 삭제합니다.
 
 ```python
 row_count = connection.execute_command(
