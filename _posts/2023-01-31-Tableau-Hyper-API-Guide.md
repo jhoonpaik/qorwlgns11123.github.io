@@ -280,8 +280,7 @@ if __name__ == '__main__':
 
 
 
-참고자료
+# Reference
 
-[Tableau Hyper API 공식문서](https://help.tableau.com/current/api/hyper_api/en-us/index.html)
-
-[Tableau Hyper API 샘플코드(Github)](https://github.com/tableau/hyper-api-samples/tree/main/Tableau-Supported)
+[Tableau Hyper API 공식문서](https://help.tableau.com/current/api/hyper_api/en-us/index.html)  
+[Tableau Hyper API 샘플코드(Github)](https://github.com/tableau/hyper-api-samples/tree/main/Tableau-Supporte)
