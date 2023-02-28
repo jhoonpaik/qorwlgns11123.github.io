@@ -82,7 +82,9 @@ from tableauhyperapi import HyperProcess, Telemetry, \
     HyperException
 ```
 
-# Definition Table
+# Hyper API Practice
+
+## Definition Table
 
 Hyper API 실습에 사용할 테이블을 정의 및 생성하겠습니다.
 
@@ -121,7 +123,7 @@ customer_table = TableDefinition(
 )
 ```
 
-# Insert Table
+## Insert Table
 
 데이터 삽입을 위해 데이터베이스에 연결하고 연결된 데이터베이스에서 이전에 정의한 테이블 함수와 연결합니다.
 
@@ -164,7 +166,7 @@ with Inserter(connection, orders_table) as inserter:
                 inserter.execute()
 ```
 
-# Update Table
+## Update Table
 
 Hyper API를 이용하여 특정 조건을 지정한 후, .hyper 데이터를 조건에 따라 갱신할 수 있습니다.
 
@@ -227,7 +229,7 @@ print(f"Post-Update: Individual rows showing 'Order Date' and 'Order ID'"
 
 위 결과를 보면 조건에 해당하는 컬럼의 날짜가 +10이 된 것을 확인할 수 있습니다.
 
-# Delete Table
+## Delete Table
 
 이번엔 조건에 맞는 데이터를 삭제하는 프로세스를 진행하겠습니다.
 
@@ -254,7 +256,7 @@ row_count = connection.execute_command(
 
 위와 같이 Orders 테이블에서 2012-08-01 이하에 해당되는 Customer ID의 행이 Customer 테이블에서 삭제된 것을 확인할 수 있습니다.
 
-# Function
+## Function
 
 Insert, Update, Delete 등 데이터 조작을 위해 작성한 코드는 함수화한 다음 아래와 같이 실행해야 반영됩니다.
 
